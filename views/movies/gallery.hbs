@@ -1,0 +1,60 @@
+<div class="container">
+
+    <h1>Galería de películas</h1>
+
+    <hr>
+
+    <div class="row">
+
+        {{#each movies}}
+
+        <div class="col-md-3 movie-card">
+
+            <figure>
+                <img alt="{{title}}" src="{{cover}}">
+                <figcaption>
+                    <p>{{title}} (año {{year}})</p>
+                </figcaption>
+            </figure>
+
+        </div>
+
+        {{/each}}
+    </div>
+
+    <h1>Galería (slider)</h1>
+
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                {{#each movies}}
+
+                <li class="glide__slide">
+                    <figure>
+                        <img alt="{{title}}" src="{{cover}}" style="width: 100%">
+                        <figcaption>
+                            <p>{{title}} (año {{year}})</p>
+                        </figcaption>
+                    </figure>
+                </li>
+
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src="/js/glide.min.js"></script>
+
+<script>
+
+    new Glide('.glide', {
+        perView: 4,
+        autoplay: 5000,
+        gap: 50
+    }).mount()
+
+</script>

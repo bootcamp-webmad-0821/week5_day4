@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <h1>Nueva película (subida local)</h1>
+
+            <hr>
+
+            <form action="/peliculas/crear-local" method="POST" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label for="title">Título</label>
+                    <input type="text" class="form-control" id="title" name="title">
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Año</label>
+                    <input type="number" class="form-control" id="year" name="year">
+                </div>
+
+                <div class="form-group">
+                    <label for="cover">Archivo</label>
+                    <input type="file" class="form-control" id="cover" name="cover">
+                </div>
+
+                <button type="submit" class="btn btn-dark btn-block">Crear película</button>
+            </form>
+        </div>
+    </div>
+</div>
